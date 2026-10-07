@@ -30,7 +30,7 @@ def ranking(names: list[str], scores: list[float]) -> list[str]:
     return res
 
 def above_average(names: list[str], scores: list[float]) -> list[str]:
-    sr_znach = sum(scores) / len(scores)
+    sr_znach = average(scores)
     new_names = []
     for i in range(len(scores)):
         if scores[i] > sr_znach:
@@ -38,4 +38,4 @@ def above_average(names: list[str], scores: list[float]) -> list[str]:
     return new_names
 
 if __name__ == '__main__':
-    print(winner(["Аня", "Боря", "Вика"], [7.0, 9.0, 8.0]))
+    print(winner(["Аня", "Боря", "Вика"], [7.0, 9.0, 18.0]))
