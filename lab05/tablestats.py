@@ -3,8 +3,8 @@ def read_rows(lines: list[str]) -> list[dict]:
     header = None
     for line in lines:
         line = line.rstrip("\n").rstrip("\r")
-        if line == "":
-            continue
+        # if line == "":
+        #     continue
         fds = line.split(",")
         clean_fds = [f.rstrip() for f in fds]
         if header is None:
