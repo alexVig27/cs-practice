@@ -17,3 +17,15 @@ def read_rows(lines: list[str]) -> list[dict]:
             row_dict[header[i]] = clean_fds[i]
         rows.append(row_dict)
     return rows
+
+def count_types(rows: list[dict]) -> dict:
+    counts = {}
+    for row in rows:
+        t_curr = row['тип']
+        if t_curr not in counts:
+            counts[t_curr] = 1
+        else:
+            counts[t_curr] += 1
+    return counts
+
+
