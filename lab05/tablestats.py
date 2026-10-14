@@ -57,7 +57,7 @@ def total_minutes(rows: list[dict], kind: str) -> float:
 
 
 def to_csv(counts: dict) -> str:
-    text = "тип, количество\n"
+    text = "тип,количество\n"
     all_types = list(counts.keys())
     all_types.sort()
     for kind in all_types:
