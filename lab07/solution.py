@@ -17,3 +17,12 @@ def column_means(matrix: list[list[float]]) -> list[float]:
         return []
     srednee = np.mean(arr, axis=0)
     return np.round(srednee, 6).tolist()
+
+def column_range(matrix: list[list[float]], column: int) -> float:
+    arr = np.array(matrix)
+    if arr.size == 0:
+        return 0.0
+    b = arr[:, column]
+    mx = np.max(b, axis=0)
+    mn = np.min(b, axis=0)
+    return float(mx - mn)
