@@ -10,3 +10,10 @@ def block(matrix: list[list[float]], rows: list[int], columns: list[int]) -> lis
     arr = np.array(matrix)
     b = arr[np.ix_(rows, columns)]
     return np.round(b, 6).tolist()
+
+def column_means(matrix: list[list[float]]) -> list[float]:
+    arr = np.array(matrix)
+    if arr.size == 0:
+        return []
+    srednee = np.mean(arr, axis=0)
+    return np.round(srednee, 6).tolist()
