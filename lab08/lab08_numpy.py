@@ -62,3 +62,10 @@ changed_matrix[:, -1] = -1
 changed_matrix[1:4, 1:4] = 100
 print('changed_matrix:', changed_matrix)
 print('matrix:', matrix)
+
+numbers = np.arange(0, 12)
+table = numbers.reshape(3, 4) # reshape(3, 4) работает, а reshape(5, 3) вызовет ошибку потому что numbers имеет 12 элементов, а 12 нельзя разделить на 5 строк по 3 числа на каждой, не хватит элементов
+transposed = table.T
+print('форма numbers:', numbers.shape)
+print('форма table:', table.shape)
+print('форма transposed:', transposed.shape)
