@@ -12,3 +12,6 @@ print(line.tolist(), line.shape, line.ndim, line.size, line.dtype)
 print(zeros.tolist(), zeros.shape, zeros.ndim, zeros.size, zeros.dtype)
 print(unknown_table.tolist(), unknown_table.shape, unknown_table.ndim, unknown_table.size, unknown_table.dtype)
 print(identity.tolist(), identity.shape, identity.ndim, identity.size, identity.dtype)
+
+
+print(hours.tolist(), hours[2], hours[-1], hours[2:6].tolist(), hours[::2], hours[::-1])
