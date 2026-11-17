@@ -11,3 +11,12 @@ def vector_report(values: list[float]) -> dict:
             'каждый второй': arr[::2].tolist(),
             'развёрнутый вектор': arr[::-1].tolist(),
             }
+
+def change_vector(values: list[float]) -> list[float]:
+    arr = np.array(values, dtype=float).copy()
+    arr[2:4] = 99
+    arr[::2] = -1
+    return arr.tolist()
+
+
+
