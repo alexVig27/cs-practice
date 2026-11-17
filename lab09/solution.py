@@ -19,4 +19,7 @@ def change_vector(values: list[float]) -> list[float]:
     return arr.tolist()
 
 
-
+def cap_above(values: list[float], limit: float) -> list[float]:
+    arr = np.array(values, dtype=float)
+    arr[arr > limit] = limit
+    return arr.tolist()
